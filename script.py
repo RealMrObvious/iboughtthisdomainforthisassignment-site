@@ -24,7 +24,7 @@ for i in range(num_sites):
     for num in outgoing_links:
         if(folder == './adv'):
             if(num != i): # dont link to self
-                links_to_add += f'<a href="N_{i+1}.html">N_{num} </a>'
+                links_to_add += f'<a href="N_{num}.html">N_{num} </a>'
 
         elif(folder == './basic'):
             plus1 = i + 1
@@ -34,7 +34,7 @@ for i in range(num_sites):
                 plus1 = 0
             
             if(minus1 < 0):
-                minus1 = num_sites
+                minus1 = num_sites - 1
 
             links_to_add = f'<a href="N_{minus1}.html">N_{minus1} </a> <a href="N_{plus1}.html">N_{plus1} </a>'
 
